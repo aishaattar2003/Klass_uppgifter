@@ -1,0 +1,17 @@
+import math #importerar matematik relaterande täcken
+
+radius = int(input("Vill du mata in en heltal eller en decimal? för heltal skriv siffran här för decimal skriv 0!"))
+# En fråga som får skribenten att välja om han vill ange ett heltal eller en decimal tal
+
+if radius == 0:             #om skribenten väljer decimal
+    radius = float(input("Skriv din decimal tal här!"))         #frågar igen för att ange ett decimal tal
+    round(radius, 2)               #avrundar den angivna decimal talet till två decimaler
+else:                              #om skribenten väljer heltal så kör programmet vidare
+     
+    def area(radius):
+        a = math.pi * radius**2    #variablen a är pi multiplecerad med radien i kvadart
+        return a                   #ger tillbaka den nya värdet av a
+
+x = area(radius)                   #ger svaret på funtionken en x variabel
+
+print("%.2f" % x)                  #printa ut cirkelns area avrundat till två decimaler
