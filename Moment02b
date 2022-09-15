@@ -1,0 +1,12 @@
+sec = int(input('Enter seconds!')) #input sekunder
+
+def convert(sec): 
+    seconds = sec % (24 * 3600)     #variabel för att ge dem angivna sekunderna ett värde
+    hour = sec // 3600             #variabel för att ge timmerna ett värde
+    seconds %= 3600               
+    minutes = sec // 60          #variabel för att ge minuterna ett värde
+    seconds %= 60               #variabel för att ge de nya sekunderna ett värde
+      
+    return "%dh%02dm%02ds" % (hour, minutes, seconds) #på vilket sätt det printas, och vad ska funtionen ge för svar!
+
+print(convert(sec))    #print själva funktionen med avseende på de angivna sekunder
