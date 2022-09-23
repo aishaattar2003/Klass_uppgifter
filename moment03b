@@ -1,0 +1,33 @@
+#moment03b
+
+salary = int(input('Ange din månadslön: '))
+
+x = salary
+
+if x > 1600:
+    year_salary = x * 12
+    kommunal_skatt = x * 0.2136
+    landsting_skatt = x * 0.1148
+    kvar_efter_skatt = x - (landsting_skatt + kommunal_skatt)
+    
+    txt1 = "Månadslön: {0:>14}kr. (Årslön: {1:>6}kr)."
+    print(txt1.format(x, year_salary))
+    txt2 = "Kommunal skatt: {:>21}kr."
+    print(txt2.format(kommunal_skatt))
+    txt3 = "Landstingsskatt: {:>9}kr."
+    print(txt3.format(landsting_skatt))
+    txt4 = "Kvar efter skatt: {:>9}kr."
+    print(txt4.format(kvar_efter_skatt))
+
+else:
+    year_salary = x * 12
+    kvar_efter_skatt = x
+    
+    txt5 = "Månadslön: {0:>14}kr. (Årslön: {1:>6}kr)."
+    print(txt5.format(x, year_salary))
+    
+    txt6 = "Kvar efter skatt: {:>7}kr."
+    print(txt6.format(kvar_efter_skatt))
+    
+    print("Eftersom du tjänar under brytpunkten betalar du ingen skatt")
+
