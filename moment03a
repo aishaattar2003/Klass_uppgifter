@@ -1,0 +1,18 @@
+#moment03a
+
+salary = int(input('Ange din månadslön: '))
+
+x = salary
+kommunal_skatt = x * 0.2136
+landsting_skatt = x * 0.1148
+kvar_efter_skatt = x - (landsting_skatt + kommunal_skatt)
+
+
+txt1 = "Månadslön: {:>14}kr."
+print(txt1.format(x))
+txt2 = "Kommunal skatt: {:>10}kr."
+print(txt2.format(kommunal_skatt))
+txt3 = "Landstingsskatt: {:>9}kr."
+print(txt3.format(landsting_skatt))
+txt4 = "Kvar efter skatt: {:>9}kr."
+print(txt4.format(kvar_efter_skatt))
