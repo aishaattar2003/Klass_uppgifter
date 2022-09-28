@@ -1,0 +1,28 @@
+#moment04e
+# Funktion Fibonacci talföljd
+# Funktionen fibonacci(n) beräknar i vilken n:te plats finns siffran!
+
+
+def fibonacci(n):
+    if n == 0:     # om den angivna siffran är noll
+        return 0   # visa 0 då den har plats noll i talföljden
+    elif n== 1:    # om den angivna siffran är 1
+        return 1   # visa 1 då den har plats ett i talföljden
+    else:          # annars om den angivna siffran n > 1 då sker följande uttryck.
+        return fibonacci(n-1) + fibonacci(n-2)   # visa föregående siffra + nästkommande siffra i talföljden
+    
+fibonacci(n)
+
+# Funktionen fib() frågar användaren att ange vilket siffra och använder information från funktionen ovan!
+
+def fib():
+    print("This function computes the Fibonacci numbers!") # Funtionen presenterar sig själv :D
+    n = eval(input("Please enter a number: "))             # ange en siffra
+    if not isinstance(n,int):                              # om n är inte lka med en gilltig sifra 
+        print("Wrong input!")                              # visar programmet "Wrong input!"
+    elif n < 0:                                            # om siffran n är mindre än noll  
+        print("Input should be a positive number!")        # visar programmet detta!
+    else:                                                  # annars körs funktionen och räknar ut vilket Fibonacci siffra är n
+        print("The Fibonacci number nr ",n," is ",fibonacci(n))   # funktionen visar n:te plats och vilken Fibonacci siffra är n
+
+fib()
