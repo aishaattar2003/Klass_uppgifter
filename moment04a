@@ -1,0 +1,23 @@
+#moment04a
+
+längd = eval(input('Vad är fyrkantens längd? '))
+bredd = eval(input('Vad är fyrkantens bredd? '))
+höjd = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+
+area = längd * bredd
+
+print('Rektangeln har sidorna', längd, 'och', bredd, 'vilket gör att arean är', area)
+
+if längd == bredd:
+    print('Eftersom bägge sidorna är lika långa så är denna rektangel en kvadrat.')
+else: 
+    print('Eftersom bägge sidorna är ej lika långa så är denna en rektangel.')
+    
+print('------------------------')
+print("|{0:10s}|{1:11s}|".format("Höjden", "Volymen"))
+print('------------------------')
+
+for i in höjd:
+    print("|{0:10d}|{1:11d}|".format(i, (i * area)))
+    
+print('------------------------')
