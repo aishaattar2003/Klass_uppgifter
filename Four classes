@@ -1,0 +1,79 @@
+#class1
+class Clock:   
+    def __init__(self):
+        self._hours = 12
+        self._minutes = 0
+        self._seconds = 0
+
+    def getHours(self):
+        return self._hours
+
+    def getMinutes(self):
+        return self._minutes
+
+    def getSeconds(self):
+        return self._seconds
+
+    def show(self):
+        print ("%d:%02d:%02d" % (self._hours, self._minutes, self._seconds))
+        
+c = Clock()
+c.show()
+
+
+
+#class2
+class Room:
+    length = 0.0
+    breadth = 0.0
+    
+    def calculate_area(self):
+        print("Area of Room =", self.length * self.breadth)
+
+study_room = Room()
+study_room.length = 42.5
+study_room.breadth = 30.8
+
+
+study_room.calculate_area()
+
+
+
+#class3
+class Car:
+
+    wheels = 4
+
+    def __init__(self, color, style):
+        self.color = color
+        self.style = style
+
+c = Car('Black', 'Sedan')
+
+print(c.style)
+print(c.color)
+
+c.style = 'SUV'
+print(c.style)
+
+
+#class4
+from datetime import date
+
+class Student:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    @classmethod
+    def calculate_age(cls, name, birth_year):
+        return cls(name, date.today().year - birth_year)
+
+    def show(self):
+        print(self.name + "'s age is: " + str(self.age))
+
+jessa = Student('Aisha', 19)
+jessa.show()
+
+joy = Student.calculate_age("Golsa", 2004)
+joy.show()
